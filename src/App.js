@@ -1,10 +1,11 @@
+import Body from "./components/Body";
+import Header from "./components/Header";
 
 function App() {
   return (
     <div>
-      <h1>
-        aditya jain
-      </h1>
+      <Header />
+      <Body/>
     </div>
   );
 }
