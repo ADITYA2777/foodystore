@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
 import Restaurant from "./Restaurant";
-import Shimmer from "./Shimmer";
+// import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
+import ShimmerUi from "./ShimmerUi";
 
 const Body = () => {
   const [listRestaurant, setListRestaurant] = useState([]);
@@ -43,6 +44,7 @@ const Body = () => {
           ?.restaurants || [];
       setListRestaurant(restaurants);
       setFilterDataRestaurants(restaurants);
+      // console.log(restaurants);
     } catch (error) {
       console.error("Error fetching data:", error);
     }
@@ -59,7 +61,7 @@ const Body = () => {
   }
 
   return listRestaurant.length === 0 ? (
-    <Shimmer />
+    <ShimmerUi />
   ) : (
     <div className="body mx-4 md:mx-10 lg:mx-20 xl:mx-32 ">
       <div className="filter flex flex-row items-center md:space-x-4 ml- md:ml-0 sm-ml-0">

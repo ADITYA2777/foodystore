@@ -11,79 +11,88 @@
     font-family: 'Roboto Condensed', sans-serif;
   }
 }
-/* 
-.Header{
+
+
+.carousel-loading {
+  background-color: #171a29;
+  color: hsla(0, 0%, 100%, .8);
+  text-align: center;
+  padding: 0 20px;
+}
+
+.spinner {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(180deg, #ecebeb, hsla(0, 3%, 92%, .51) 53%, hsla(0, 3%, 92%, 0));
   display: flex;
-  justify-content:space-between;
   align-items: center;
-  background-color: black;
-  color: aliceblue;
+  border-radius: 50%;
+  justify-content: center;
+  animation: rotate 2s infinite;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
 }
-.logo{
-  width:100px;
- margin: 10px;
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg)
+  }
+
+  to {
+    transform: rotate(1turn)
+  }
 }
-.nav-items>ul{
-  display: flex;
-  list-style-type: none;
-  font-size: 17px;
-  }
-  .nav-items>ul>li{
-   padding:10px;
-   margin: 10px;
-  }
-  .res-card{
-    padding:5px;
-    width:200px;
-    box-shadow: 0px 1px 5px black;
-    margin: 15px;
-  }
-  .res-card:hover{
-   border: 1px solid black;
-   cursor: pointer;
-  }
-  .card-img{
-    width:180px;
-  }
-  .res-container{
-    display: flex;
-    flex-wrap: wrap;
-  }
-  .search{
-    padding: 10px;
-  }
-  .filter-btn{
-    margin: 10px;
+
+.spinner::after {
+  position: absolute;
+  display: block;
+  top: 4px;
+  left: 4px;
+  width: 72px;
+  height: 72px;
+  content: "";
+  background-color: #171a29;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.animate {
+  animation: shimmer 3s;
+  animation-iteration-count: infinite;
+  background: linear-gradient(to right, #e6e6e6 5%, #cccccc 25%, #e6e6e6 35%);
+  background-size: 1000px 100%;
+}
+
+@keyframes shimmer {
+  from {
+    background-position: -1000px 0;
   }
 
+  to {
+    background-position: 1000px 0;
+  }
+}
 
-  /* shimmer effect css */
+.scroll-left,
+.scroll-right {
+  border-radius: 100%;
+  height: 34px;
+  padding: 8px 8px 4px;
+  background: rgb(226, 226, 231);
+  cursor: pointer;
+  opacity: 0.5;
+}
 
-    /* Shimmer.css */
-  
-    .card {
-      width: 300px;
-      height: 200px;
-      background-color: #f0f0f0;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      border-radius: 8px;
-      overflow: hidden;
-      margin: 10px;
-    } */
-  
-    .shimmer {
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.5), transparent);
-      animation: shimmerAnimation 1.5s infinite;
-    }
-  
-    @keyframes shimmerAnimation {
-      0% {
-        background-position: -200% 0;
-      }
-  
-      100% {
-        background-position: 200% 0;
-      }
-    }
+.custom-shadow {
+  text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+@media (max-width:1024px) {
+  .text-shadow {
+    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.6);
+  }
+}
+
+
+
+ 
