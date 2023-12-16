@@ -5,18 +5,17 @@ import Error from "./components/Error";
 import Header from "./components/Header";
 import { Outlet, createBrowserRouter } from "react-router-dom";
 import Restaurantmenu from "./components/Restaurantmenu";
-import { Suspense, lazy } from "react";
-// ;
+import { Suspense, lazy} from "react";
 
 
 const Grocery = lazy(() => import("./components/Grocery"));
 
 function App() {
   return (
-    <div>
-      <Header />
-      <Outlet />
-    </div>
+      <div>
+        <Header />
+        <Outlet />
+      </div>
   );
 }
 
@@ -59,3 +58,6 @@ export const appRouter = createBrowserRouter([
 ]);
 
 export default App;
+
+
+

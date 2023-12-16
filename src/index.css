@@ -93,6 +93,16 @@
   }
 }
 
+.dark {
+  --bg-primary: #1a202c;
+  --text-primary: #ffffff;
+  /* Add more dark theme styles as needed */
+}
 
+.light {
+  --bg-primary: #ffffff;
+  --text-primary: #1a202c;
+  /* Add more light theme styles as needed */
+}
 
  

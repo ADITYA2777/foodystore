@@ -2,6 +2,7 @@ import React from 'react'
 import { CARD_URL } from '../utils/constant';
 
 const Restaurant = (props) => {
+
   const { resData } = props
   const {
     name,
@@ -22,7 +23,7 @@ const Restaurant = (props) => {
       <h4 className='font-medium text- text-gray-500 '>{cuisines?.join(" ,")}</h4>
       <h4>{avgRatingString} ⭐stars</h4>
       <h4 className="bg-green-500 text-white text-center px-4 py-2 mt-2 rounded">{costForTwo}</h4>
-      <h5 className = "text-gray-500 text-sm mt-2">{locality}</h5>
+      <h5 className="text-gray-500 text-sm mt-2">{locality}</h5>
     </div>
   );
 }

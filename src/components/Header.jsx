@@ -5,7 +5,9 @@ import useOnlineStatus from "../utils/useOnlineStatus";
 
 const Header = () => {
   const [letBtn, setLetBtn] = useState("Login")
-  const  onlineStatus = useOnlineStatus()
+  const onlineStatus = useOnlineStatus()
+
+  
   return (
     <div className="header">
       <div className=" flex justify-between  bg-gradient-to-tr from-pink-800 to-orange-500 text-white w-full h-full  m-4 shadow-md rounded-md">
@@ -21,13 +23,7 @@ const Header = () => {
               <Link to="/">Home</Link>
             </li>
             <li>
-              <Link to="/about">AboutUs</Link>
-            </li>
-            <li>
               <Link to="/grocery">Grocery</Link>
-            </li>
-            <li>
-              <Link to="/contact">ContactUs</Link>
             </li>
             <li>
               <Link to="/cart">Cart</Link>
