@@ -2,7 +2,7 @@ import React from 'react'
 const Shimmer = () => {
   return (
     <div>
-      <div className="2xl:w-6/12 mx-auto menu-container pt-28 pb-5 md:w-10/12 w-full px-3">
+      <div className="2xl:w-6/12 mx-auto menu-container pt-28 pb-5 md:w-10/12 w-full px-3 ">
         <div className="flex items-start justify-between pt-5 mb-6">
           <div>
             <div className="mb-1 bg-gray-400 animate w-[100px] h-[15px]"></div>
