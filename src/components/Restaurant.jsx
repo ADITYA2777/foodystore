@@ -12,7 +12,7 @@ const Restaurant = (props) => {
     costForTwo,
   } = resData?.info;
   return (
-    <div className=" m-4 md:m-2 p-4 w-full md:w-[350px] lg:w-[250px] xl:w-[270px] rounded-lg mx-auto md:mx-0 bg-gray-100 hover:shadow-md transition duration-300 ease-in-out ">
+    <div className=" m-4 md:m-2 p-4  w-[350px] md:w-[350px] lg:w-[250px] xl:w-[270px] rounded-lg mx-auto md:mx-0 sm:mx-0 bg-gray-100 hover:shadow-md transition duration-300 ease-in-out ">
       <img
         className="card-img rounded-lg cursor-pointer w-full "
         src={CARD_URL + cloudinaryImageId}

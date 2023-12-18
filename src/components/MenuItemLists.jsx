@@ -2,11 +2,28 @@ import React from "react";
 import { CARD_URL } from "../utils/constant";
 import { useDispatch } from "react-redux";
 import { addItems } from "../redux/cartSlices";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 
 const MenuItemLists = ({ items }) => {
 const dispatch = useDispatch()
   const handlerAdditems = (item) => {
     dispatch(addItems(item))
+
+     toast.success(`${item.card.info.name} added to cart!`, {
+       position: "bottom-right",
+       autoClose: 2000, // Close the notification after 2000 milliseconds (2 seconds)
+       hideProgressBar: true,
+       closeOnClick: true,
+       pauseOnHover: true,
+       style: {
+         fontSize: "16px",
+         fontWeight: "bold",
+         color: "green",
+         background: "black", // Background color
+       },
+     });
   }
 
 //   console.log(items);

@@ -3,19 +3,38 @@ import MenuItemLists from "./MenuItemLists";
 import { useDispatch, useSelector } from "react-redux";
 import { clearCartItem, removeItem } from "../redux/cartSlices";
 import { Link } from "react-router-dom";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Cart = () => {
+  const cartItems = useSelector((store) => store.cart.items);
+  const dispatch = useDispatch();
+  const handlerClearCart = () => {
+    dispatch(clearCartItem());
+  };
 
-    const cartItems = useSelector((store) => store.cart.items);
-     const dispatch = useDispatch()
-    const handlerClearCart = () => {
-        dispatch(clearCartItem())
+  const handlerRemoveCart = () => {
+    if (cartItems.length > 0) {
+      // Assuming you're removing the last item in this example
+      const removedItem = cartItems[cartItems.length - 1];
+      dispatch(removeItem());
+
+      // Show toast notification
+      toast.info(`Removed ${removedItem.card.info.name} from your cart.`, {
+        position: "bottom-right",
+        autoClose: 2000,
+        hideProgressBar: true,
+        closeOnClick: true,
+        pauseOnHover: true,
+        style: {
+          fontSize: "16px",
+          fontWeight: "bold",
+          color: "orangered",
+          background: "black",
+        },
+      });
     }
-    
-    const handlerRemoveCart = () => {
-        dispatch(removeItem())
-    }
-    
+  };
 
   return (
     <div className="text-center m-4 p-4 bg-gradient-to-b from-orange-500 to-orange-700 font-medium">
@@ -50,6 +69,7 @@ const Cart = () => {
           </div>
         )}
         <MenuItemLists items={cartItems} />
+        <ToastContainer />
       </div>
     </div>
   );

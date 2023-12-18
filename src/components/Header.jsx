@@ -67,13 +67,13 @@ const Header = () => {
 
   return (
     <div className="header">
-      <div className="flex  md:flex-row justify-between bg-gradient-to-tr from-pink-800 to-orange-500 text-white w-full m-4 shadow-md rounded-md">
+      <div className="flex md:flex-row justify-between bg-gradient-to-tr from-pink-800 to-orange-500 text-white w-full  shadow-md rounded-md">
         <div className="flex items-center p-4">
           <Link to="/">
             <img className="logo w-20 md:w-24" src={LOGO_URL} alt="LogoUrl" />
           </Link>
         </div>
-        <div className="flex items-center p-4">
+        <div className="flex items-center p-2 m-10">
           <ul className="flex text-sm md:text-xl sm:text-lg gap-10">
             <li className="hidden md:block">
               Online Status: {onlineStatus ? "🍏" : "🍎"}

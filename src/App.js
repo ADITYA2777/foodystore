@@ -9,6 +9,8 @@ import { Suspense, lazy } from "react";
 import { Provider } from "react-redux";
 import appStore from "./redux/appStore";
 import Cart from "./components/Cart";
+import Footer from "./components/Footer";
+
 
 const Grocery = lazy(() => import("./components/Grocery"));
 
@@ -18,6 +20,7 @@ function App() {
       <div>
         <Header />
         <Outlet />
+        <Footer/>
       </div>
     </Provider>
   );
@@ -58,7 +61,7 @@ export const appRouter = createBrowserRouter([
       },
       {
         path: "/cart",
-        element: <Cart/>,
+        element: <Cart />,
       },
     ],
     errorElement: <Error />,

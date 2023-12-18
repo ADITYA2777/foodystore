@@ -1,4 +1,5 @@
 
+import { ToastContainer } from 'react-toastify';
 import MenuItemLists from './MenuItemLists';
 import { SlArrowDown } from "react-icons/sl";
 const RestaurantsCategory = ({data,showItem,setShowIndex}) => {
@@ -22,6 +23,7 @@ const RestaurantsCategory = ({data,showItem,setShowIndex}) => {
             </span>
           </div>
           {showItem && <MenuItemLists items={data.itemCards} />}
+          <ToastContainer/>
         </div>
       </div>
     );

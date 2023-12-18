@@ -229,7 +229,7 @@ const fetchData = async () => {
 
       <div
         key="id"
-        className=" grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4  "
+        className=" grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
       >
         {filterDataRestaurants.map((resLists) => (
           <Link key={resLists.info.id} to={"/restaurants/" + resLists.info.id}>
